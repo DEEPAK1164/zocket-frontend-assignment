@@ -51,8 +51,8 @@ const CanvaEditor = () => {
   };
 
   return (
-    <div className="flex items-center justify-center">
-      <div className="mr-20">
+    <div className="flex items-center justify-center mr-6">
+      <div className="rounded-lg shadow-lg p-6 mr-20 bg-white">
         <div className="mb-6">
           <label className="block mb-2">Background Color:</label>
           <ChromePicker
@@ -60,7 +60,7 @@ const CanvaEditor = () => {
             onChange={handleBackgroundColorChange}
           />
         </div>
-        <div className="mb-6">
+        <div className="mb-6 ">
           <label className="block mb-2">Text Color:</label>
           <ChromePicker
             color={textColor}
@@ -68,7 +68,7 @@ const CanvaEditor = () => {
           />
         </div>
       </div>
-      <canvas ref={canvasRef} width={400} height={400} className="border-2 border-black" />
+      <canvas ref={canvasRef} width={400} height={400} className="rounded-lg shadow-lg border-2 border-white" />
     </div>
   );
 };
